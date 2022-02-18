@@ -1,0 +1,349 @@
+﻿@using WebResult.WebSite.Models
+@using WebResult.WebSite.DAL.Models.Enums
+@model WebResult.WebSite.Models.LoginModel
+@{
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+@helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:style = "display:none;"
+    }
+}
+<!-- <head>
+    <title ng-app="modalapp" ng-controller="modalcontroller">{{'IndexTitle' | translate}} </title>
+</head> -->
+
+<header id="header">
+        <div class="row" style="margin-right:0px !important;margin-left:0px !important;">
+            <div style="padding-right:0px !important;padding-left:0px !important;">
+                <div class="language-button">
+
+                    <!--  <a href="#"  class="language-button">Arabic</a> <i class="fa fa-globe" aria-hidden="true" style="margin-right:5px; font-size:18px;color:#fff;margin-top: 4px;"></i> !-->
+                    @using (Html.BeginForm("SetCulture", "Home", FormMethod.Post, new { @name = "frmLang" }))
+                    {
+                        <div class="col-md-12">
+
+                            <input type="hidden" name="culture" ng-value="culture" ng-init="culture=en-us;" />
+                            <input type="hidden" name="CurrentUrl" ng-value="CurrentUrl" ng-init="CurrentUrl=test;" />
+
+
+
+
+
+                            <button type="submit" href="#" ng-click="SetLanguage('ar-eg');" @selected("ar-eg", culture) class="language-button" role="button">
+                                <i class="fa fa-globe" aria-hidden="true" style="margin-right:5px; font-size:18px;color:#fff;
+margin-top: 4px;"></i>اللغة العربية
+                            </button>
+                            <!--<a ng-href="SetLanguage('ar-eg');" ng-click="SetLanguage('ar-eg');" @selected("ar-eg", culture) class="language-button" >اللغة العربية </a>-->
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <button type="submit" href="#" ng-click="SetLanguage('en-us');" @selected("en-us", culture) class="language-button" role="button">
+                                <i class="fa fa-globe " aria-hidden="true" style="margin-right:5px; font-size:18px;color:#fff;
+margin-top: 4px;"></i> English
+                            </button>
+                            <!--<a ng-href="SetLanguage('en-us');" ng-click="SetLanguage('en-us');" @selected("en-us", culture) class="language-button" >English </a>-->
+
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+</header>
+
+
+<div class="row" style="text-align: center !important;">
+    <div class="container">
+
+        <div class="col-md-12" style="text-align: center !important;">
+            <img src="~/Areas/Demardash/assets/images/logo.svg"   height="200px" width="180px"/>
+
+        </div>
+    </div>
+</div>
+
+
+              <div class="row">
+              <div class="col-md-12" style="height:75px;">  </div>
+              </div>
+
+
+
+        <div class="row">
+
+            <div class="container">
+
+
+                <div class="col-md-2" ng-click="openModal('@LoginType.Patient.ToString()')">
+
+                    <div class="service-box ">
+                        <figure class="icon">
+                            <i class="fa fa-user" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                        </figure>
+
+                        <div class="service-box_body">
+                            <div class="index-btn">{{'PatienBtn' | translate}}</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-2" ng-click="openModal('@LoginType.Doctor.ToString()')">
+                    <div class="service-box ">
+                        <figure class="icon">
+                            <i class="fa fa-user-md" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                        </figure>
+
+                        <div class="service-box_body">
+                            <div class="index-btn">{{'DoctorBtn' | translate}}</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-2" ng-click="openModal('@LoginType.Payer.ToString()')">
+                    <div class="service-box ">
+                        <figure class="icon">
+                            <i class="fa fa-hospital-o" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                        </figure>
+
+                        <div class="service-box_body">
+                            <div class="index-btn">{{'LabBtn' | translate}}</div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-2" ng-click="openModal('@LoginType.Location.ToString()')">
+
+                    <div class="service-box ">
+                        <figure class="icon">
+                            <i class="fa fa-stethoscope	" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                        </figure>
+
+                        <div class="service-box_body">
+                            <div class="index-btn">{{'LocationBtn' | translate}}</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <a href="/Areas/Demardash/assets/images/labServiceManual.pdf" target="_blank"></a>
+                    <div class="service-box ">
+                        <a href="/Areas/Demardash/assets/images/labServiceManual.pdf" target="_blank">
+                            <figure class="icon">
+                                <i class="fa fa-download" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                            </figure>
+                        </a>
+                    <div class="service-box_body">
+                            <a href="/Areas/Demardash/assets/images/labServiceManual.pdf" target="_blank">
+                            </a>
+                            <div class="index-btn">{{'ServiceBtnFirst' | translate}}</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <a href="/Areas/Demardash/assets/images/labServiceManual2.pdf" target="_blank">
+                    </a><div class="service-box ">
+                        <a href="/Areas/Demardash/assets/images/labServiceManual2.pdf" target="_blank">
+                            <figure class="icon">
+                                <i class="fa fa-download" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                            </figure>
+                        </a><div class="service-box_body">
+                            <a href="/Areas/Demardash/assets/images/labServiceManual2.pdf" target="_blank">
+                            </a>
+                            <div class="index-btn">{{'ServiceBtnSecond' | translate}}</div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                @*<div class="col-md-2">
+            <a href="~/Areas/Demardash/assets/images/labServiceManual.pdf" target="_blank">
+                <div class="service-box ">
+                    <figure class="icon">
+                        <i class="fa fa-download" style="font-size:75px;color:#fff; margin:30px;text-shadow: 0 2px 4px rgba(0,0,0,0.40);"></i>
+                    </figure>
+                    <div class="service-box_body">
+            </a>
+            <div class="index-btn">{{'ServiceBtn' | translate}}</div>
+        </div>*@
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+<footer class="footer footer-sm">
+    <a href="http://nt-me.com/">   {{'DevelopedBy' | translate}} </a><br>
+    {{'CopyRight' | translate}}
+</footer>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="areas/Demardash/assets/css/style.css">
+
+
+
+
+<body ng-app="modalapp" ng-controller="modalcontroller">
+
+    @section scripts {
+        <script src="~/Scripts/angular.min.js"></script>
+        <script src="~/Scripts/angular-route.min.js"></script>
+        <script src="~/Scripts/angular-animate.min.js"></script>
+        <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+        <script src="~/Scripts/angular-translate.min.js"></script>
+        <script src="~/Scripts/angular-translate-loader-static-files.js"></script>
+
+        <script type="text/ng-template" id="myModal.html">
+            <div class="modal-header">
+                <h2 class="modal-title">{{'LoginMessage' | translate}}</h2>
+            </div>
+            <div class="modal-body">
+                <div>
+                    @using (Html.BeginForm("LogIn", "Home", FormMethod.Post, new { @id = "LoginFrm", @class = "form-horizontal", @name = "forms.formName1" }))
+                    {
+                        <div class="text-center">
+                            <label class=" text-danger ">{{errorMessage}}</label>
+                            <img ng-show="IscallService" style="height:16px;width:16px" src="~/Images/loading.gif" />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">{{UserNameLbl}}</label>
+                            <input type="text" ng-required="true" ng-model="UserName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label class="text-info">{{'Password' | translate}}</label>
+                            <input type="password" ng-required="true" ng-model="Password" class="form-control" />
+                        </div>
+                        <button type="button" class="btn btn-primary" ng-click="ok()" style="font-family: arial; ">{{'Submit' | translate}}</button>
+                        <button class="btn btn-default" type="button" ng-click="cancel()" style="font-family: arial; ">{{'Cancel' | translate}}</button>
+
+                    }
+                </div>
+            </div>
+        </script>
+        <script>
+            var app = angular.module('modalapp', ['ngAnimate', 'ui.bootstrap', 'pascalprecht.translate']);
+
+            app.config(['$translateProvider', function ($translateProvider) {
+
+                $translateProvider.useStaticFilesLoader({ prefix: '/areas/Demardash/Resources/lang_', suffix: '.json' });
+                $translateProvider.preferredLanguage(CurrentLanguage);
+
+            }]);
+
+            app.controller('modalcontroller', function ($scope, $http, $uibModal) {
+                $scope.animationsEnabled = true;
+                $scope.forms = {};
+                $scope.IscallService = false;
+                $scope.SetLanguage = function (cul) {
+                    $scope.culture = cul;
+                    var urlpath = window.location.pathname;
+                    $scope.CurrentUrl = urlpath;
+                };
+                $scope.openModal = function (LoginType) {
+                    var ModalInstance = $uibModal.open({
+                        animation: $scope.animationsEnabled,
+                        templateUrl: 'myModal.html',
+                        controller: 'InstanceController',
+                        backdrop: false,
+                        resolve: {
+                            items: function () {
+                                return LoginType;
+                            }
+                        }
+                    });
+                };
+            });
+            app.controller('InstanceController', function ($scope, $http, $uibModalInstance, $translate, items) {
+                var LoginType = items;
+
+
+                if (LoginType == "@LoginType.Patient.ToString()") {
+                    $scope.UserNameLbl = $translate.instant('PatientId');
+                }
+                else if (LoginType == "@LoginType.AccNum.ToString()") {
+                    $scope.UserNameLbl = $translate.instant('UserNameLbl');
+                }
+                else if (LoginType == "@LoginType.Doctor.ToString()") {
+                    $scope.UserNameLbl = $translate.instant('DoctorId');
+                }
+                else
+                {
+                    $scope.UserNameLbl = $translate.instant('UserNameLbl');
+                }
+
+                $scope.ok = function () {
+
+                    if ($scope.forms.formName1.$valid) {
+                        $scope.IscallService = true;
+                        var model = {
+                            'UserName': $scope.UserName,
+                            'Password': $scope.Password,
+                            'LoginType': LoginType
+                        };
+
+
+                        var x = JSON.stringify(model);
+
+                        $http({
+                            url: '@Url.Action("LogIn")',
+                            method: "POST",
+                            data: x,
+                        }).then(function (data) {
+
+                            if (data.data.ErrorMessage == undefined) {
+                                window.location.href = "/Result/" + data.data.Action;
+                            } else {
+                                $scope.errorMessage = $translate.instant('LoinInvalid');
+                            }
+                            $scope.IscallService = false;
+                        },
+                         function (response) {
+
+                         });
+
+
+                    }
+                    else {
+                        $scope.errorMessage = $translate.instant('LoginReq');
+                    }
+
+                };
+                $scope.cancel = function () {
+                    $uibModalInstance.dismiss('cancel');
+                };
+            });
+
+        </script>
+
+    }
+
+</body>
+
+
+
+

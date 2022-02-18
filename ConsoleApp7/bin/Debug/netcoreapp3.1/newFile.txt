@@ -1,0 +1,15 @@
+SELECT *      
+                   FROM ( SELECT   COUNT (*) OVER () totalRows,      
+                                  ACCI.PATIENTNAME AS PATIENTNAME,      
+                                  ACCI.PATIENT_NUM AS PATIENTNUMBER,      
+                                  ACCI.ACCNUMBER AS ACCESSIONNUMBER,      
+                                  ACCI.CLINICREFNO AS CLINICREFNO,      
+                                  ACCI.RESULTDATE AS RESULTDATE,      
+                                  ACCI.VISITDATE AS ACCESSIONVISITDATE,      
+                                  ACCI.Id ,      
+          ACCI.VISITDATE,      
+          ACCI.ACCNUMBER      
+                             FROM Leaderstes_ACCESSION ACCI,      
+                                  Leaderstes_USERS USERS       
+            WHERE  format(ACCI.VISITDATE,'dd/MM/yyyy hh:mm:ss')>='01/09/2020 12:00:00' AND format(ACCI.VISITDATE,'dd/MM/yyyy hh:mm:ss')<='01/09/2021 12:00:00' AND LOWER (ACCI.PATIENTNAME)  = 'test' ) as outr      
+      

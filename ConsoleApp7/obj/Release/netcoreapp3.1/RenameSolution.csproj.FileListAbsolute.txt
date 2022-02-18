@@ -1,0 +1,14 @@
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\RenameSolution.exe
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\RenameSolution.deps.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\RenameSolution.runtimeconfig.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\RenameSolution.runtimeconfig.dev.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\RenameSolution.dll
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\RenameSolution.pdb
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.csproj.AssemblyReference.cache
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.AssemblyInfoInputs.cache
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.AssemblyInfo.cs
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.csproj.CoreCompileInputs.cache
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.dll
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.pdb
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Release\netcoreapp3.1\RenameSolution.genruntimeconfig.cache

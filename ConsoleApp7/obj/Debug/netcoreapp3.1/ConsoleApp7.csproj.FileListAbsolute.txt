@@ -1,0 +1,14 @@
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp3.1\ConsoleApp7.exe
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp3.1\ConsoleApp7.deps.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp3.1\ConsoleApp7.runtimeconfig.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp3.1\ConsoleApp7.runtimeconfig.dev.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp3.1\ConsoleApp7.dll
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Debug\netcoreapp3.1\ConsoleApp7.pdb
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.AssemblyInfoInputs.cache
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.AssemblyInfo.cs
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.csproj.CoreCompileInputs.cache
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.dll
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.pdb
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.genruntimeconfig.cache
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\obj\Debug\netcoreapp3.1\ConsoleApp7.csproj.AssemblyReference.cache

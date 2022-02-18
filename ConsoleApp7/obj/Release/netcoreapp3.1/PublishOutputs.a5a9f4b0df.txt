@@ -1,0 +1,5 @@
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\publish\RenameSolution.exe
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\publish\RenameSolution.dll
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\publish\RenameSolution.deps.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\publish\RenameSolution.runtimeconfig.json
+C:\Users\moataz.allam\source\repos\ConsoleApp7\ConsoleApp7\bin\Release\netcoreapp3.1\publish\RenameSolution.pdb
